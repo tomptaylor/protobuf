@@ -1,0 +1,16 @@
+{
+  "nested": {
+    "dept": {
+      "fields": {
+        "type": {
+          "type": "string",
+          "id": 1
+        },
+        "dom": {
+          "type": "boolean",
+          "id": 2
+        }
+      }
+    }
+  }
+}

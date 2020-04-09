@@ -1,0 +1,20 @@
+{
+    "nested": {
+      "AwesomeMessage": {
+        "fields": {
+          "awesomeField": {
+            "type": "string",
+            "id": 1
+          },
+          "awesomeField2": {
+            "type": "string",
+            "id": 2
+          },
+          "type": {
+            "type": "uint32",
+            "id": 3
+          }
+        }
+      }
+    }
+  }

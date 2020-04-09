@@ -1,0 +1,408 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/object_02",
+  "definitions": {
+    "object_01": {
+      "title": "attribObj",
+      "type": "object",
+      "required": [
+        "idx",
+        "flags"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "idx": {
+          "type": "number"
+        },
+        "flags": {
+          "$ref": "#/definitions/array_01"
+        }
+      }
+    },
+    "object_02": {
+      "type": "object",
+      "required": [
+        "dept",
+        "dest",
+        "tid",
+        "sid",
+        "filters",
+        "hash",
+        "attribs",
+        "diverted",
+        "origDest",
+        "origDept",
+        "counter",
+        "ts",
+        "radar",
+        "prevCallsign",
+        "divertCheck",
+        "delta",
+        "route",
+        "path",
+        "eta",
+        "callsign",
+        "vip",
+        "gov",
+        "ga",
+        "commercial",
+        "acftISO",
+        "iasa",
+        "carrier",
+        "tfmdgOnly",
+        "sensors",
+        "sensorList",
+        "prevPos",
+        "lon",
+        "lat",
+        "speed",
+        "heading",
+        "alt",
+        "altType",
+        "acftType",
+        "mode3",
+        "emergency",
+        "gv",
+        "domestic",
+        "outbound",
+        "inbound",
+        "overflight",
+        "foreign",
+        "filter",
+        "tsaIntl",
+        "flags",
+        "attribObj",
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "dept": {
+          "type": "object",
+          "required": [
+            "type",
+            "dom",
+            "arpt",
+            "iso",
+            "src"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "number"
+            },
+            "dom": {
+              "type": "boolean"
+            },
+            "arpt": {
+              "type": "string"
+            },
+            "iso": {
+              "type": "string"
+            },
+            "src": {
+              "type": "string"
+            }
+          }
+        },
+        "dest": {
+          "type": "object",
+          "required": [
+            "type",
+            "dom",
+            "arpt",
+            "iso",
+            "src"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "number"
+            },
+            "dom": {
+              "type": "boolean"
+            },
+            "arpt": {
+              "type": "string"
+            },
+            "iso": {
+              "type": "string"
+            },
+            "src": {
+              "type": "string"
+            }
+          }
+        },
+        "tid": {
+          "type": "number"
+        },
+        "sid": {
+          "type": "string"
+        },
+        "filters": {
+          "title": "filters",
+          "type": "object",
+          "required": [
+            "vip",
+            "gov",
+            "tfmdg",
+            "callsign",
+            "beacon"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "vip": {
+              "type": "boolean"
+            },
+            "gov": {
+              "type": "boolean"
+            },
+            "tfmdg": {
+              "type": "boolean"
+            },
+            "callsign": {
+              "type": "boolean"
+            },
+            "beacon": {
+              "type": "boolean"
+            }
+          }
+        },
+        "hash": {
+          "title": "hash",
+          "type": "object",
+          "required": [
+            "path",
+            "arpt",
+            "pos"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "arpt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "pos": {
+              "type": "string"
+            }
+          }
+        },
+        "attribs": {
+          "type": "number"
+        },
+        "diverted": {
+          "type": "boolean"
+        },
+        "origDest": {
+          "type": "null"
+        },
+        "origDept": {
+          "type": "null"
+        },
+        "counter": {
+          "type": "number"
+        },
+        "ts": {
+          "type": "string"
+        },
+        "radar": {
+          "title": "radar",
+          "type": "object",
+          "required": [
+            "primary",
+            "beacon",
+            "reinforced",
+            "coasting",
+            "tfmdg",
+            "adsb",
+            "link16",
+            "etd",
+            "ais",
+            "manual",
+            "correlated",
+            "sorted"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "primary": {
+              "type": "boolean"
+            },
+            "beacon": {
+              "type": "boolean"
+            },
+            "reinforced": {
+              "type": "boolean"
+            },
+            "coasting": {
+              "type": "boolean"
+            },
+            "tfmdg": {
+              "type": "boolean"
+            },
+            "adsb": {
+              "type": "boolean"
+            },
+            "link16": {
+              "type": "boolean"
+            },
+            "etd": {
+              "type": "boolean"
+            },
+            "ais": {
+              "type": "boolean"
+            },
+            "manual": {
+              "type": "boolean"
+            },
+            "correlated": {
+              "type": "boolean"
+            },
+            "sorted": {
+              "type": "boolean"
+            }
+          }
+        },
+        "prevCallsign": {
+          "type": "boolean"
+        },
+        "divertCheck": {
+          "type": "boolean"
+        },
+        "delta": {
+          "type": "number"
+        },
+        "route": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "eta": {
+          "type": "number"
+        },
+        "callsign": {
+          "type": "string"
+        },
+        "vip": {
+          "type": "boolean"
+        },
+        "gov": {
+          "type": "boolean"
+        },
+        "ga": {
+          "type": "boolean"
+        },
+        "commercial": {
+          "type": "boolean"
+        },
+        "acftISO": {
+          "type": "boolean"
+        },
+        "iasa": {
+          "type": "boolean"
+        },
+        "carrier": {
+          "title": "carrier",
+          "type": "object",
+          "required": [
+            "icao",
+            "attribs"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "icao": {
+              "type": "string"
+            },
+            "attribs": {
+              "type": "number"
+            }
+          }
+        },
+        "tfmdgOnly": {
+          "type": "boolean"
+        },
+        "sensors": {
+          "type": "string"
+        },
+        "sensorList": {
+          "type": "array",
+          "title": "sensorList",
+          "items": {
+            "type": "string"
+          }
+        },
+        "prevPos": {
+          "$ref": "#/definitions/array_01"
+        },
+        "lon": {
+          "type": "number"
+        },
+        "lat": {
+          "type": "number"
+        },
+        "speed": {
+          "type": "number"
+        },
+        "heading": {
+          "type": "number"
+        },
+        "alt": {
+          "type": "number"
+        },
+        "altType": {
+          "type": "number"
+        },
+        "acftType": {
+          "type": "string"
+        },
+        "mode3": {
+          "type": "number"
+        },
+        "emergency": {
+          "type": "boolean"
+        },
+        "gv": {
+          "type": "boolean"
+        },
+        "domestic": {
+          "type": "boolean"
+        },
+        "outbound": {
+          "type": "boolean"
+        },
+        "inbound": {
+          "type": "boolean"
+        },
+        "overflight": {
+          "type": "boolean"
+        },
+        "foreign": {
+          "type": "boolean"
+        },
+        "filter": {
+          "type": "number"
+        },
+        "tsaIntl": {
+          "type": "boolean"
+        },
+        "flags": {
+          "type": "number"
+        },
+        "attribObj": {
+          "$ref": "#/definitions/object_01"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    },
+    "array_01": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="long.js"></script>
+    <script src="bytebuffer.js"></script>
+    <script src="protobuf.js"></script>
+
+<body>
+
+</body>
+<script>
+    var sock = new WebSocket("ws://localhost:8080", 'echo-protocol');
+    sock.binaryType = 'arraybuffer';
+    sock.onopen = function (event) {
+        alert("Socket connected successfully");
+        setTimeout(function () {
+            console.log('sent');
+            sock.send("hello")
+        }, 1000);
+        sock.onmessage = function (event) {
+            console.log(event.data);
+            var ProtoBuf = dcodeIO.ProtoBuf
+            var Message = ProtoBuf
+                .loadProtoFile('track.proto', (err, builder) => {
+                    if (err) {
+                        console.log(err);
+                    }
+                    Message = builder.build('Track');
+                    var decoded = Message.decode(event.data);
+                    console.log(`decoded = ${JSON.stringify(decoded)}`);
+
+                })
+
+        }
+    }
+</script>
+
+</html>

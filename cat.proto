@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Cat {
+    bool barks = 1;
+    int32 yearsold = 2;
+
+    message Parent {
+        string name = 1;
+        string email = 2;
+    }
+
+    repeated Parent parents = 4;
+}
